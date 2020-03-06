@@ -1,0 +1,12 @@
+package com.arun.phonebook.app;
+
+import java.util.List;
+
+public class PhoneBookService {
+
+	public void editContact(Contact contact) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

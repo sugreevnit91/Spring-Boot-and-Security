@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring-security-demo-jdbc"/>
+<aop-project name="CourseApp-data"/>
+<aop-project name="spring-security-demo"/>
+<aop-project name="spring-security-jpa"/>
+<aop-project name="spring-phonebook-demo"/>
+</aop-reference-model>

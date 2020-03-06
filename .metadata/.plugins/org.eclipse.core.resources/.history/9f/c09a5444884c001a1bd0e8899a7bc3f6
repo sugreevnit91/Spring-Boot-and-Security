@@ -1,0 +1,11 @@
+import junit.framework.TestResult;
+
+public class TestJunit3 extends TestResult {
+	
+	// add the error
+	public synchronized void addError(Test test, Throwable t) {
+		super.addError((junit.framework.Test) test, t);
+	}
+	
+	
+}

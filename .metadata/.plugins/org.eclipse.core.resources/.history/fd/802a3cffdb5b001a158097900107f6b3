@@ -1,0 +1,15 @@
+package com.arun.phonebook.app;
+
+public class PhoneBookService {
+
+	public void addContract(Contact contact) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void editContract(Contact contact) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

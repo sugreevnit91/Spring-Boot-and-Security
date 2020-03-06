@@ -1,0 +1,12 @@
+import org.junit.Test;
+
+public class TestRun {
+	
+	String message = "Hello Java world!";
+	MessageUtil messageUtil = new MessageUtil(message);
+	
+	@Test
+	public void testMessage() {
+		
+	}
+}

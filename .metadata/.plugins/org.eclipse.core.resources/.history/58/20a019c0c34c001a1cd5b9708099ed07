@@ -1,0 +1,10 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Test {
+	public static void main(String[] args) {
+//		DateFormat df = new SimpleDateFormat("dd MMM yyyy");
+		String text = new SimpleDateFormat("dd MMM yyyy").format(new java.sql.Date(new Date().getTime()));
+		System.out.println(text);
+	}
+}

@@ -1,0 +1,16 @@
+import org.junit.Test;
+
+public class TestEmployeeDetails {
+	EmpBusinessLogic empBusinessLogic = new EmpBusinessLogic();
+	EmployeeDetails employee = new EmployeeDetails();
+	
+	@Test
+	public void testCalculateYearlySalary() {
+		
+	}
+	
+	@Test
+	public void testCalculateAppraisal() {
+		
+	}
+}

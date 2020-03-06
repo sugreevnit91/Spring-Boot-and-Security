@@ -1,0 +1,7 @@
+package com.security.jpa;
+
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+public class AuthenticationManager extends WebSecurityConfigurerAdapter {
+
+}

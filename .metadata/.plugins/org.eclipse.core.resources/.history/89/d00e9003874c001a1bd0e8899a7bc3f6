@@ -1,0 +1,14 @@
+import org.junit.Before;
+
+import junit.framework.TestCase;
+
+public class TestJunit2 extends TestCase {
+	protected double fValue1;
+	protected double fValue2;
+	
+	@Before
+	public void setUp() {
+		fValue1 = 2.0;
+		fValue2 = 3.0;
+	}
+}

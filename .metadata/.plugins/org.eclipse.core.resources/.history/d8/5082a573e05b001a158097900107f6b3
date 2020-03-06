@@ -1,0 +1,30 @@
+package com.arun.phonebook.app;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="contact")
+public class Contact {
+	@Id
+	private String number;
+	private String name;
+
+	public String getPhoneNumber() {
+		return number;
+	}
+
+	public void setPhoneNumber(String number) {
+		this.number = number;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

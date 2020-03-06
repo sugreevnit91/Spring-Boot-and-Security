@@ -1,0 +1,17 @@
+import org.junit.Test;
+
+public class TestEmployeeDetails {
+	
+	EmpBusinessLogic empBusinessLogic = new EmpBusinessLogic();
+	EmployeeDetails employee = new EmployeeDetails();
+	
+	@Test
+	public void testCalculateYearlySalary() {
+		employee.setMonthlySalary(10000);
+	}
+	
+	@Test
+	public void testCalculateAppraisal() {
+		
+	}
+}

@@ -1,0 +1,5 @@
+import junit.framework.TestCase;
+
+public class TestJunit2 extends TestCase {
+
+}

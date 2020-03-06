@@ -1,0 +1,6 @@
+
+public class TestEmployeeDetails {
+	EmpBusinessLogic empBusinessLogic = new EmpBusinessLogic();
+	EmployeeDetails employee = new EmployeeDetails();
+	
+}

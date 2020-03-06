@@ -1,0 +1,5 @@
+import junit.framework.TestResult;
+
+public class TestJunit3 extends TestResult {
+	
+}

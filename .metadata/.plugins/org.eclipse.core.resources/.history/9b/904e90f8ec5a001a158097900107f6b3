@@ -1,0 +1,36 @@
+package io.springboot.app.CourseApp.course;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CourseService {
+
+	@Autowired
+	private CourseRepository courseRepository;
+	
+	public List<Course> getAllCourses() {
+		List<Course> list = new ArrayList<Course>();
+		courseRepository.findAll().forEach(topic->list.add(topic));
+		return list;
+	}
+	
+	public Course getTopicById(String id) {
+		return courseRepository.findById(id).get();
+	}
+
+	public void addTopic(Course topic) {
+		courseRepository.save(topic);
+	}
+
+	public void updateTopic(Course topic, String id) {
+		courseRepository.save(topic);
+	}
+
+	public void deleteTopic(String id) {
+		courseRepository.deleteById(id);
+	}
+}

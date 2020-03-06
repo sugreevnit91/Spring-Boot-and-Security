@@ -1,0 +1,2 @@
+insert into users (username, password, enabled) values ('sugreev', 'pass', true), ('foo', 'pass', true);
+insert into authorities (username, authority) values ('sugreev', 'ROLE_ADMIN'), ('foo', 'ROLE_USER');

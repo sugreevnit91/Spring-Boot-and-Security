@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=/home/sugreev/Desktop/MyTest/parkingLot/.git\:/home/sugreev/Desktop/MyTest/ds_programs/.git\:/home/sugreev/Desktop/MyTest/circuitbreaker/.git\:/home/sugreev/Desktop/MyTest/ds_practice/.git\:
+GitRepositoriesView.GitDirectories.relative=parkingLot/.git\:ds_programs/.git\:circuitbreaker/.git\:ds_practice/.git\:
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

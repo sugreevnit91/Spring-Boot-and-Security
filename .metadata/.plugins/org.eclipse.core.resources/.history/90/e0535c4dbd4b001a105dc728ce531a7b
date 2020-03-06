@@ -1,0 +1,14 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class TestRun {
+	
+	String message = "Hello Java world!";
+	MessageUtil messageUtil = new MessageUtil(message);
+	
+	@Test
+	public void testMessage() {
+		assertEquals(message, messageUtil.printMessage());
+	}
+}
