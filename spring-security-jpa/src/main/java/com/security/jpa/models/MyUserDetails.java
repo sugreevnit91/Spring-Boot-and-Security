@@ -53,7 +53,7 @@ public class MyUserDetails implements UserDetails {
 
 	@Override
 	public boolean isAccountNonExpired() {
-		return true;
+		return active;
 	}
 
 	@Override

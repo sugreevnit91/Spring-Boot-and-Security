@@ -40,8 +40,13 @@ public class PhoneBookController {
 		return phoneBookService.getContactByNumber(number);
 	}
 	
-	@RequestMapping("/deleteContact/{number}")
-	public void deleteContact(@PathVariable String number) {
-		phoneBookService.deleteContact(number);
+	@RequestMapping("/deleteContactByNumber/{number}")
+	public void deleteContactByMobNumber(@PathVariable String number) {
+		phoneBookService.deleteContactByMobNumber(number);
+	}
+	
+	@RequestMapping("/deleteContactByName/{name}")
+	public void deleteContactByName(@PathVariable String name) {
+		phoneBookService.deleteContactByName(name);
 	}
 }

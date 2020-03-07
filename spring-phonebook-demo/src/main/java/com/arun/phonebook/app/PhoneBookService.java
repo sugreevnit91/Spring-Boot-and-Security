@@ -1,7 +1,8 @@
 package com.arun.phonebook.app;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,32 +11,41 @@ import org.springframework.stereotype.Service;
 public class PhoneBookService {
 
 	@Autowired
-	private PhoneBookDao phoneBookDao;
-	
+	private PhoneBookDaoImpl phoneBookDaoImpl;
+
+	@Transactional
 	public void editContact(Contact contact) {
-		phoneBookDao.save(contact);
+		phoneBookDaoImpl.updateContact(contact);
 	}
-	
+
+	@Transactional
 	public void addContact(Contact contact) {
-		phoneBookDao.save(contact);
+		phoneBookDaoImpl.insertContact(contact);
 	}
 
+	@Transactional
 	public List<Contact> getAllContacts() {
-		List<Contact> contactList = new ArrayList<Contact>();
-		phoneBookDao.findAll().forEach(contactList::add);
-		return contactList;
+		return phoneBookDaoImpl.getAllContacts();
 	}
 
-	public void deleteContact(String id) {
-		phoneBookDao.deleteById(id);
+	@Transactional
+	public void deleteContactByName(String name) {
+		phoneBookDaoImpl.deleteContactByName(name);
 	}
 
+	@Transactional
+	public void deleteContactByMobNumber(String mobNumber) {
+		phoneBookDaoImpl.deleteContactByMobNumber(mobNumber);
+	}
+
+	@Transactional
 	public Contact getContactByName(String name) {
-		return phoneBookDao.findByName(name);
+		return phoneBookDaoImpl.findByName(name);
 	}
 
-	public Contact getContactByNumber(String number) {
-		return phoneBookDao.findById(number).get();
+	@Transactional
+	public Contact getContactByNumber(String mobNumber) {
+		return phoneBookDaoImpl.findByMobNumber(mobNumber);
 	}
-	
+
 }

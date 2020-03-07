@@ -1,2 +1,9 @@
 1583080536095	Rename type 'Controller'
 1583080607392	Rename type 'PhoneBook'
+1583574565122	Move compilation unit
+1583575862294	Extract local variable 'contacts'
+1583576486859	Rename package 'com.arun.phonebook.app.service'
+1583576508847	Delete element
+1583576518484	Move compilation unit
+1583576524971	Delete element
+1583576605876	Rename field 'phoneBookDao'

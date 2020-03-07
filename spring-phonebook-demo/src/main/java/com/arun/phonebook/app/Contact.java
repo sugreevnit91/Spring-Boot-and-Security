@@ -7,19 +7,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="contact")
+@Table(name = "contacts_info")
 public class Contact {
-	
-	@Id
-	private String id;
-	private String name;
 
-	
-	public String getId() {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	private String name;
+	private String mobNumber;
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -29,6 +30,14 @@ public class Contact {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getMobNumber() {
+		return mobNumber;
+	}
+
+	public void setMobNumber(String mobNumber) {
+		this.mobNumber = mobNumber;
 	}
 
 }
