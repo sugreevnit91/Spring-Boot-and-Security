@@ -74,6 +74,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/sugreev/Desktop/MyTest/ds_practice"/>
 			<item value="/home/sugreev/Desktop/MyTest/CourseApp"/>
 			<item value="/home/sugreev/Downloads/demo-spring-boot"/>
 		</list>

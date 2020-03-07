@@ -1,7 +1,0 @@
-package io.springboot.app.CourseApp.topics;
-
-import org.springframework.data.repository.CrudRepository;
-
-public class TopicRepository implements CrudRepository<T, ID> {
-
-}
