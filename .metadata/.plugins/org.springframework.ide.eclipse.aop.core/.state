@@ -4,5 +4,6 @@
 <aop-project name="CourseApp-data"/>
 <aop-project name="spring-security-demo"/>
 <aop-project name="spring-security-jpa"/>
+<aop-project name="spring-security-jwt"/>
 <aop-project name="spring-phonebook-demo"/>
 </aop-reference-model>

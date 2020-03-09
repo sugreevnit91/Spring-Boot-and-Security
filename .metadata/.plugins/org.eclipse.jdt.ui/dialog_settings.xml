@@ -149,4 +149,10 @@
 			<item value="/home/sugreev/Desktop/phonebook.jar"/>
 		</list>
 	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="SelfEncapsulateFieldWizard">
+		<item key="GenerateJavadoc" value="false"/>
+	</section>
 </section>

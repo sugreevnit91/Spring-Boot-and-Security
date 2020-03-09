@@ -1,7 +1,0 @@
-package com.arun.phonebook.app;
-
-import org.springframework.data.repository.CrudRepository;
-
-public interface PhoneBookDao extends CrudRepository<PhoneBook, String>{
-	
-}
