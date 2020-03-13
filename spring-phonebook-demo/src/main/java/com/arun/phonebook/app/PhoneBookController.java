@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+//All the logging messages are handled at centralized location (LoggingAspect.java)
+
 @RestController
 public class PhoneBookController {
 
@@ -21,77 +23,70 @@ public class PhoneBookController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "/addContact")
 	public void addContact(@RequestBody Contact contact) {
-		logger.info("Inside addContact() method");
 		try {
 			phoneBookService.addContact(contact);
 		} catch (Exception e) {
-			logger.error(String.format("error while adding contact: {}", contact.getName()), e);
+//			TODO
 		}
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value = "/editContact")
 	public void editContact(@RequestBody Contact contact) {
-		logger.info("Inside editContact() method");
 		try {
 			phoneBookService.editContact(contact);
 		} catch (Exception e) {
-			logger.error(String.format("error while updating contact: {}", contact.getName()), e);
+//			TODO
 		}
 	}
 
 	@RequestMapping("/getAllContacts")
 	public List<Contact> getAllContacts() {
-		logger.info("Inside getAllContacts() method");
 		List<Contact> allContacts = null;
 		try {
 			allContacts = phoneBookService.getAllContacts();
 		} catch (Exception e) {
-			logger.error("error in fetching all contacts", e);
+//			TODO
 		}
 		return allContacts;
 	}
 
 	@RequestMapping("/getContactByName/{name}")
 	public Contact getContactByName(@PathVariable String name) {
-		logger.info("Inside getContactByName() method");
 		Contact contact = null;
 		try {
 			contact = phoneBookService.getContactByName(name);
 		} catch (Exception e) {
-			logger.error(String.format("error while getting contact for name: {}", name), e);
+//			TODO
 		}
 		return contact;
 	}
 
 	@RequestMapping("/getContactByNumber/{number}")
 	public Contact getContactByNumber(@PathVariable String number) {
-		logger.info("Inside getContactByNumber() method");
 		Contact contact = null;
 		try {
 			contact = phoneBookService.getContactByNumber(number);
 		} catch (Exception e) {
-			logger.error(String.format("error while getting contact for number: {}", number), e);
+//			TODO
 		}
 		return contact;
 	}
 
 	@RequestMapping("/deleteContactByNumber/{number}")
 	public void deleteContactByMobNumber(@PathVariable String number) {
-		logger.info("Inside deleteContactByMobNumber() method");
 		try {
 			phoneBookService.deleteContactByMobNumber(number);
 		} catch (Exception e) {
-			logger.error(String.format("error while deleting by number: {}", number), e);
+//			TODO
 		}
 	}
 
 	@RequestMapping("/deleteContactByName/{name}")
 	public void deleteContactByName(@PathVariable String name) {
-		logger.info("Inside deleteContactByName() method");
 		try {
 			phoneBookService.deleteContactByName(name);
 		} catch (Exception e) {
-			logger.error(String.format("error while deleting by name: {}", name), e);
+//			TODO
 		}
 	}
 }
