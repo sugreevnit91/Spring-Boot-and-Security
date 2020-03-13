@@ -3,8 +3,10 @@ package com.arun.phonebook.aspect;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -39,4 +41,16 @@ public class LoggingAspect {
 		logger.info("return value for the method " + joinPoint.getSignature().getName() + " is: "
 				+ ((Contact) retVal).getMobNumber());
 	}
+	
+	@Around("execution(* com.arun.phonebook.app.PhoneBookController.getAllContacts(..))")
+    public void logAroundAllMethods(ProceedingJoinPoint joinPoint) throws Throwable 
+    {
+		logger.info("Inside " + joinPoint.getSignature().getName() + " Before Method Execution");
+        try {
+            joinPoint.proceed();
+        } finally {
+            //Do Something useful, If you have
+        }
+        logger.info(joinPoint.getSignature().getName() + " method is executed successfully");
+    }
 }
