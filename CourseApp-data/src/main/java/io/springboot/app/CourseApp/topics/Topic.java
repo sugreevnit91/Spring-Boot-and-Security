@@ -5,26 +5,17 @@ import javax.persistence.Id;
 
 @Entity
 public class Topic {
+	
 	@Id
-	private String id;
+	private Integer id;
 	private String name;
 	private String description;
-	
-	
-	public Topic() {
-		super();
-	}
 
-	public Topic(String id) {
-		super();
-		this.id = id;
-	}
-
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

@@ -8,8 +8,9 @@ import io.springboot.app.CourseApp.topics.Topic;
 
 @Entity
 public class Course {
+	
 	@Id
-	private String id;
+	private Integer id;
 	private String name;
 	private String description;
 	@ManyToOne
@@ -23,11 +24,11 @@ public class Course {
 		this.topic = topic;
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

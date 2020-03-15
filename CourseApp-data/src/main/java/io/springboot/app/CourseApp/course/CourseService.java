@@ -5,34 +5,34 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.springboot.app.CourseApp.topics.Topic;
-
 @Service
 public class CourseService {
 
 	@Autowired
 	private CourseRepository courseRepository;
-	
-	public List<Course> getAllCourses(String topicId) {
-		return courseRepository.findByTopicId(topicId);
-	}
-	
-	public Course getCourseById(String id) {
-		return courseRepository.findById(id).get();
+
+	public List<Course> getAllCourses() {
+		return courseRepository.getAllCourses();
 	}
 
-	public void addCourse(Course course, String topicId) {
-		course.setTopic(new Topic(topicId));
-		courseRepository.save(course);
+	public void addCourse(Course course, Integer topicId) {
+		courseRepository.addCourse(course, topicId);
 	}
 
-	public void updateCourse(Course course, String topicId) {
-		course.setTopic(new Topic(topicId));
-		courseRepository.save(course);
+	public void deleteCourse(String name) {
+		courseRepository.deleteCourse(name);
 	}
 
-	public void deleteCourse(String id) {
-		courseRepository.deleteById(id);
+	public List<Course> getCourseByTopicId(Integer topicId) {
+		return courseRepository.getAllCoursesByTopicId(topicId);
+	}
+
+	public void updateCourseName(String oldName, String newName) {
+		courseRepository.updateCourseName(oldName, newName);
+	}
+
+	public void updateCourseDescription(String name, String description) {
+		courseRepository.updateCourseDescription(name, description);
 	}
 
 }
